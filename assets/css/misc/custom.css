@@ -1,0 +1,40 @@
+.rco-container {
+    height: calc(100vh - 100px);
+    position: relative;
+}
+
+.rco-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.rco-image.expand {
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+}
+
+.rco-info-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0 0 0 / 0.5), rgba(0 0 0 / 0));
+    padding-top: 1rem;
+}
+
+.rco-container h1,
+.rco-container p {
+    margin: 0;
+    padding: 0;
+}

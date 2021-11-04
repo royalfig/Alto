@@ -1,0 +1,14 @@
+<div class="container medium">
+    {{#get "posts" limit="2" filter="tags:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}
+        {{#if related}}
+            <h2 style="margin-top: 2rem;">Related posts</h2>
+        {{/if}}
+        <ul>
+            {{#foreach related}}
+                <li> <a href="{{url}}">{{title}}</a></li>
+            {{else}}
+                <p>...</p>
+            {{/foreach}}
+        </ul>
+    {{/get}}
+</div>
